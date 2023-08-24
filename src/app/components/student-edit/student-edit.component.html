@@ -1,0 +1,77 @@
+<form #form (ngSubmit)="onSubmit()" class="p">
+    <div class="col-md-12">
+        <div class="row">
+            <h3>Student Details</h3>
+        </div>
+        <div class="row">
+            <div class="form-group col-md-6">
+                <label for="inputTitle">Title</label>
+            <input type="text" class="form-control" id="inputTitle" placeholder="Mr, Mrs" [(ngModel)]="studentData.title">              
+            </div>
+            <div class="form-group col-md-6">
+              <label for="inputName">Name</label>
+              <input type="text" class="form-control" id="inputName" placeholder="Full Name" [(ngModel)]="studentData.name">
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="form-group col-md-6">
+                <label for="inputAddress">Address</label>
+                <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St" [(ngModel)]="studentData.address">
+            </div>
+            <div class="form-group col-md-6">
+                <label for="inputCtiy">City</label>
+              <input type="email" class="form-control" id="inputCtiy" placeholder="City" [(ngModel)]="studentData.city">
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="form-group col-md-6">
+                <label for="inputEmail">Email</label>
+              <input type="email" class="form-control" id="inputEmail4" placeholder="Email" [(ngModel)]="studentData.email">
+            </div>
+            <div class="form-group col-md-6">                
+                <label for="inputPhone">Phone</label>
+                <input type="text" class="form-control" id="inputPhone" placeholder="Phone Number" [(ngModel)]="studentData.phone">
+            </div>            
+        </div>
+        <br>
+        <div class="row">
+            <div class="form-group col-md-6">     
+                <label for="inputEmail4">Date of Birth</label>           
+                <div class="input-group">
+                    <input
+                        class="form-control"
+                        placeholder="yyyy-mm-dd"
+                        name="dp"
+                        
+                        ngbDatepicker
+                        #d="ngbDatepicker"
+                    />
+                    <button class="btn btn-outline-secondary bi bi-calendar3" (click)="d.toggle()" type="button" [(ngModel)]="studentData.dateofBirth"></button>
+                </div>
+            </div>
+            <div class="form-group col-md-6">     
+                <label for="inputEmail4">Registerd Date</label>           
+                <div class="input-group">
+                    <input
+                        class="form-control"
+                        placeholder="yyyy-mm-dd"
+                        name="dp2"                        
+                        ngbDatepicker
+                        #d2="ngbDatepicker"
+                    />
+                    <button class="btn btn-outline-secondary bi bi-calendar3" (click)="d2.toggle()" type="button" [(ngModel)]="studentData.registerdDate"></button>
+                </div>
+            </div>         
+        </div>
+        <br>  <br>
+        <div class="form-group col-md-6"> 
+
+        </div>
+        <div class="form-group col-md-6"> 
+            <button type="button" class="btn btn-warning  float-right">Save</button>
+            <button type="button" class="btn btn-primary float-right">Cancel</button>
+        </div>
+    </div>
+  </form>

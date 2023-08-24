@@ -1,0 +1,32 @@
+<div class="container-fluid g-0">
+   <main>
+   
+<div class="display-area p-3" [ngClass]="{'display-area-shrink':sideNavStatus}">
+  <div class="row">
+    <div class="col-7">
+        <h3>Students Details</h3>
+    </div>
+</div>
+<table class="table  table-striped table-hover table-bodered table-responsive">
+    <thead>
+      <tr>
+        
+        <th scope="col">Name</th>
+        <th scope="col">Email</th>
+        <th scope="col">Phone</th>
+        <th scope="col">Address</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let std of students" (click)="openPopup(std)">
+        
+        <td>{{std.name}}</td>
+        <td>{{std.email}}</td>
+        <td>{{std.phone}}</td>
+        <td>{{std.address}}</td>
+      </tr>      
+    </tbody>
+  </table>
+</div>    
+  </main>
+</div>
